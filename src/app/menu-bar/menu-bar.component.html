@@ -1,1 +1,21 @@
-<p>menu-bar works!</p>
+
+<mat-toolbar color="primary" class="navbar">
+    <mat-toolbar-row>
+        <div class="logo">PencilArt</div>
+    </mat-toolbar-row>
+    <mat-toolbar-row class="nav">
+        <ul class="nav-items">
+            <li>
+                <a [routerLink]="['/home']" routerLinkActive="active" >
+                    Home
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="['/routePath']" routerLinkActive="active" >Service</a>
+            </li>
+            <li>
+                <a [routerLink]="['/routePath']" routerLinkActive="active" >Alpha</a>
+            </li>
+        </ul>
+    </mat-toolbar-row>
+</mat-toolbar>
