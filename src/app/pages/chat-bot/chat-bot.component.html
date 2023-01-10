@@ -1,0 +1,30 @@
+<div class="chat-bot">
+    <mat-card class="chat-box mat-elevation-z8">
+        <mat-card-header>
+            <!--<div mat-card-avatar class="header-image"></div>-->
+            <mat-card-title><h1>Messages</h1></mat-card-title>
+            <!--<mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content class="msg-content">
+            <div *ngFor="let message of messages" class="msg">
+                <div class="container">
+                <p>{{message}}</p>
+                </div>
+            </div>
+        </mat-card-content>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+            <form #loginForm=ngForm>
+                <div>
+                    <textarea class="form-fild" autocomplete="off" placeholder="Type Your Message..." name="newmessage" 
+                        [(ngModel)]="newmessage.msg" required>
+                    </textarea>
+                </div>
+                <div>
+                    <button class="btn btn-primary" (click)="sendMessage()" [disabled]="!loginForm.valid">Send</button>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

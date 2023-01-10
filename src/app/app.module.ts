@@ -8,6 +8,9 @@ import { FooterComponent } from './footer/footer.component';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { MaterialModule } from './material/material.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ArtworkService } from './services/artwork.service';
+import { PagesModule } from './pages/pages.module';
 
 
 @NgModule({
@@ -21,9 +24,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    NgbModule
+    NgbModule,
+    PagesModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ArtworkService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
